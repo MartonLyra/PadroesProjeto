@@ -13,10 +13,13 @@ class SingletonLazyTest {
         // Vamos obter duas instâncias do Singleton:
         SingletonLazy singleton1 = SingletonLazy.getInstancia();
         SingletonLazy singleton2 = SingletonLazy.getInstancia();
+        SingletonLazy singleton3 = SingletonLazy.getInstancia();
 
 
-        // Com posse de duas instâncias, vamos verificar se são as mesmas instâncias:
+        // Com posse de três instâncias, vamos verificar se são as mesmas instâncias:
         Assertions.assertTrue(singleton1 == singleton2);
+        Assertions.assertTrue(singleton1 == singleton3);
+        Assertions.assertTrue(singleton2 == singleton3);
 
 
     }
