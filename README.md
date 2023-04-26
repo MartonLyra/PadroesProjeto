@@ -75,3 +75,20 @@ Podemos ver a implementação do padrão Observer na prática através das class
 
 
 ## Padrões Estruturais: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
+
+
+### Adapter:
+
+O padrão Adapter é muito utilizado quando precisamos encaixar uma nova biblioteca de classes, adquirida de terceiros, em um sistema de software já existente, porém essas bibliotecas de classe do novo fornecedor são diferentes das bibliotecas de classes do fornecedor antigo. Como não temos o código do novo fornecedor e também não podemos alterá-la, o que pode ser feito é criar uma classe que faça essa adaptação, ou seja, ela é responsável por adaptar a interface do novo fornecedor ao formato que o sistema espera. O Adapter é muito utilizado para compatibilizar o seu sistema a outros frameworks.
+
+Portanto, o adaptador é um intermediador que recebe solicitações do cliente e converte essas solicitações num formato que o fornecedor entenda. O adaptador converte uma interface para outra, porém, também poderíamos ter um caso em que precisaríamos adaptar mais de uma classe, nesse caso entra em cena outro padrão de projeto chamado Facade (Fachada).
+
+Se a interface do fornecedor mudar novamente apenas o Adaptador necessitará ser modificado sem alterar o resto do sistema.
+
+Na nossa implementação do padrão Adapter, imagine que nosso sistema sabe trabalhar com tomadas de 3 pinos.
+
+Porém, usamos um framework antigo que só sabe ligar na tomada de 2 pinos.
+
+Com isso, foi criado AdapterTomada para nosso sistema ligar na tomada de 2 pinos.
+
+Se, futuramente, o framework atualizar, não precisamos alterar todo o sistema, alteramos apenas o adapter.
