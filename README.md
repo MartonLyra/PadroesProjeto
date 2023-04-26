@@ -71,7 +71,7 @@ Para isso, o objeto que disparará os eventos deve guardar uma instância de Pro
 
 Diferentemente da implementação via par Observable/Observer, agora é possível informar a propriedade que está sendo alterada e, os ouvintes, terão a oportunidade de receber o valor antigo e o valor novo.
 
-Podemos ver a implementação do padrão Observer na prática através das classes [RevistaSubject](src/main/java/com/marton/padroesprojeto/observerListener/RevistaSubject.java) e [AssinanteListener](src/main/java/com/marton/padroesprojeto/observerListener/AssinanteListener.java).
+Podemos ver a implementação do padrão Observer na prática através das classes [RevistaSubject](src/main/java/com/marton/padroesprojeto/observerListener/RevistaSubject.java) e [AssinanteListener](src/main/java/com/marton/padroesprojeto/observerListener/AssinanteListener.java). E, é possível conferir sua execução pelo [teste unitário](src/test/java/com/marton/padroesprojeto/observerListener/AssinanteListenerTest.java).
 
 
 ## Padrões Estruturais: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
@@ -92,3 +92,7 @@ Porém, usamos um framework antigo que só sabe ligar na tomada de 2 pinos.
 Com isso, foi criado AdapterTomada para nosso sistema ligar na tomada de 2 pinos.
 
 Se, futuramente, o framework atualizar, não precisamos alterar todo o sistema, alteramos apenas o adapter.
+
+
+
+Base64: UmVwb3NpdMOzcmlvIGNyaWFkbyBwb3IgTWFydG9uTHlyYSBjb20gYWxndW5zIGV4ZW1wbG9zIGRlIHBhZHLDtWVzIGRlIHByb2pldG9zIGRlc2Vudm9sdmlkb3MgZW0gSmF2YQ==
