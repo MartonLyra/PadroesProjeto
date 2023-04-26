@@ -1,9 +1,7 @@
-package com.marton.padroesprojeto.observer;
+package com.marton.padroesprojeto.observerObservable;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class AssinanteRevistaTest {
 

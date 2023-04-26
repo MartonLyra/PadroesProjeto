@@ -1,4 +1,4 @@
-package com.marton.padroesprojeto.observer;
+package com.marton.padroesprojeto.observerObservable;
 
 import java.util.Observable;
 import java.util.Observer;
