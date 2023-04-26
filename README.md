@@ -85,11 +85,11 @@ Portanto, o adaptador é um intermediador que recebe solicitações do cliente e
 
 Se a interface do fornecedor mudar novamente apenas o Adaptador necessitará ser modificado sem alterar o resto do sistema.
 
-Na nossa implementação do padrão Adapter, imagine que nosso sistema sabe trabalhar com tomadas de 3 pinos.
+Na nossa implementação do padrão Adapter, imagine que nosso sistema sabe trabalhar com [tomadas de 3 pinos](src/main/java/com/marton/padroesprojeto/adapter/TomadaDeTresPinos.java).
 
-Porém, usamos um framework antigo que só sabe ligar na tomada de 2 pinos.
+Porém, usamos um framework antigo que só sabe ligar na [tomada de 2 pinos](src/main/java/com/marton/padroesprojeto/adapter/TomadaDeDoisPinos.java).
 
-Com isso, foi criado AdapterTomada para nosso sistema ligar na tomada de 2 pinos.
+Com isso, foi criado [AdapterTomada](src/main/java/com/marton/padroesprojeto/adapter/AdapterTomada.java) para nosso sistema ligar, tanto na tomada de 2 pinos quanto na tomada de 3 pinos.
 
 Se, futuramente, o framework atualizar, não precisamos alterar todo o sistema, alteramos apenas o adapter.
 
