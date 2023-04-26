@@ -25,7 +25,7 @@ No presente repositório abortamos 3 tipos de implementação em Java. São eles
 - SingletonEager: o objeto será instanciado quando a classe for usada pela primeira vez, seja através de um método estático ou através do método getInstancia().
 
 
-- SingletonLazy: no modo SingletonLazy, o objeto apenas será instanciado quando da sua primeira solicitação de uso. E, a cada nova solicitação do objeto, é verificado se precisa instanciar, ou não, a primeira instância.
+- SingletonLazy: no modo SingletonLazy, a cada solicitação de uso do objeto, é verificado se a primeira instância já foi gerada ou não. Caso não tenha sido, esse primeiro objeto é instânciado. Caso métodos abstratos sejam utilizado, não será criado instância enquanto não for realmente necessário a existência do objeto.
 
 
 - SingletonLazyHolder: aqui teremos uma classe interna que guardará a instância. Com isso, temos o benefício da classe ser Thread Safe. Semelhante ao SingletonLazy, somente será gerado a instância no momento de sua primeira utilização, sem precisar checar, a cada solicitação, se a instância já existe.
@@ -40,7 +40,9 @@ Por exemplo: imagine o contexto de contas bancárias. Imagine que, existam dois 
 
 Vamos agora imaginar o método 'sacarDaConta'. Dependendo do tipo de conta, o método deve se comportar de forma diferente: na conta poupança simplesmente verifica se há saldo. Já na conta corrente, caso não haja saldo, devemos verificar se há crédito pré-aprovado.
 
-Para exemplificar esse padrão, implementamos a classe abstrata [Conta](src/test/java/com/marton/padroesprojeto/strategy/Conta.java) e as classes que a implementam: [ContaPoupanca](src/test/java/com/marton/padroesprojeto/strategy/ContaPoupanca.java) e [ContaCorrente](src/test/java/com/marton/padroesprojeto/strategy/ContaCorrente.java).
+Digamos que o sistema já está implementado e rodando com a existência de dois tipos de contas bancárias. Agora, se aparecer um terceiro tipo de conta bancária, Conta de Investimento, por exemplo, não precisamos alterar o método que chama o metodo 'sacarDaConta' já que essa nova classe da Conta de Investimento irá implementar o método 'sacarDaConta' e, com isso, irá funcionar sem condicionais do tipo de conta.    
+
+Para exemplificar esse padrão, implementamos a classe abstrata [Conta](src/main/java/com/marton/padroesprojeto/strategy/Conta.java) e as classes que a implementam: [ContaPoupanca](src/main/java/com/marton/padroesprojeto/strategy/ContaPoupanca.java) e [ContaCorrente](src/main/java/com/marton/padroesprojeto/strategy/ContaCorrente.java).
 
 E esse padrão pode ser melhor visto no método sacarDaConta(double valorSaque), das classes acima exemplificadas.
 
